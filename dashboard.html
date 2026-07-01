@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Student Dashboard | S S Tuition Center</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Styling sheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- STUDENT DASHBOARD STICKY HEADER -->
+  <header class="db-header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="S S Tuition Center Logo" class="logo-img">
+      <div class="db-logo-text">S S Student Portal</div>
+    </div>
+    
+    <div class="db-user-profile">
+      <div class="db-user-avatar" id="user-avatar-initials">ST</div>
+      <div class="db-user-info">
+        <span>Active Student</span>
+        <h4 id="profile-student-name">Student Name</h4>
+      </div>
+    </div>
+  </header>
+
+  <!-- WELCOME BANNER BOARD -->
+  <section class="db-welcome-banner">
+    <div class="db-welcome-text">
+      <h1>Welcome back, <span id="welcome-student-name">Student</span>!</h1>
+      <p>"Learn Today, Lead Tomorrow" - Track your academic roadmap here.</p>
+    </div>
+    
+    <!-- Quick performance pills -->
+    <div class="db-quick-stats">
+      <div class="db-stat-pill">
+        <span>Average Attendance</span>
+        <h3>92%</h3>
+      </div>
+      <div class="db-stat-pill">
+        <span>Last Test Mark</span>
+        <h3>95/100</h3>
+      </div>
+      <div class="db-stat-pill">
+        <span>Pending Tasks</span>
+        <h3>1</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD WORKSPACE LAYOUT -->
+  <main class="db-layout">
+    
+    <!-- LEFT PANEL: GRID DASHBOARD WIDGETS -->
+    <section class="db-cards-grid" style="padding: 0;">
+      
+      <!-- Card 1: My Courses -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-graduation-cap"></i> My Courses</h3>
+          <span class="db-card-badge">Full Academic Year</span>
+        </div>
+        <div class="db-card-body" style="display: flex; flex-direction: column; gap: 8px;">
+          <p style="font-weight: 700; color: var(--primary-mid);">Class 10 - Secondary Batch</p>
+          <p style="font-size: 0.9rem; color: #64748B;">Core Subjects: Mathematics, Physics, Chemistry, Biology, Social Science, English Grammar, Tamil</p>
+          <div style="margin-top: 10px; font-size: 0.85rem; color: var(--text-dark);">
+            <i class="fa-solid fa-circle-check" style="color: var(--accent-orange); margin-right: 5px;"></i> Class Type: Smart Hybrid Classroom
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Attendance metrics -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-calendar-check"></i> Attendance</h3>
+          <span class="db-card-badge">June 2026</span>
+        </div>
+        <div class="db-card-body attendance-visual">
+          <div class="attendance-pct">92%</div>
+          <div class="attendance-details">
+            <p><strong>Classes Attended:</strong> 23 / 25 Days</p>
+            <p style="font-size: 0.8rem; color: #10B981; margin-top: 4px;"><i class="fa-solid fa-circle-up"></i> Meets required academic standard (85%)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Pending Homework logs -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-book-open"></i> Homework</h3>
+          <span class="db-card-badge">Weekly List</span>
+        </div>
+        <div class="db-card-body">
+          <div class="homework-list">
+            <div class="homework-item">
+              <span>English: Active/Passive Voice Sheet</span>
+              <span class="pending">Pending</span>
+            </div>
+            <div class="homework-item">
+              <span>Maths: Quadratic Equations Exercise</span>
+              <span class="completed">Completed</span>
+            </div>
+            <div class="homework-item">
+              <span>Physics: Ray Optics Numericals</span>
+              <span class="completed">Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Test Marks log -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-square-poll-vertical"></i> Test Marks</h3>
+          <span class="db-card-badge">Term Progress</span>
+        </div>
+        <div class="db-card-body">
+          <div class="marks-list">
+            <div class="marks-item">
+              <span>Mathematics Mock 1</span>
+              <span><strong>95/100</strong></span>
+              <span class="marks-item-grade grade-a">A+</span>
+            </div>
+            <div class="marks-item">
+              <span>Science Term Check</span>
+              <span><strong>88/100</strong></span>
+              <span class="marks-item-grade grade-a">A</span>
+            </div>
+            <div class="marks-item">
+              <span>English Vocabulary Mock</span>
+              <span><strong>45/50</strong></span>
+              <span class="marks-item-grade grade-a">A+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: Announcements -->
+      <div class="db-card" style="grid-column: span 2;">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-bullhorn"></i> Announcements</h3>
+          <span class="db-card-badge">Recent</span>
+        </div>
+        <div class="db-card-body">
+          <div class="announcement-list" style="gap: 12px;">
+            <div style="border-left: 3px solid var(--accent-orange); padding-left: 12px;">
+              <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">June 28, 2026</span>
+              <h4 style="font-size: 0.95rem; color: var(--primary-dark); margin: 2px 0;">Board Exam registration guidelines release</h4>
+              <p style="font-size: 0.85rem; color: #475569;">All 10th and 12th standard students must bring their ID proof copies for registration database verification by Wednesday.</p>
+            </div>
+            <div style="border-left: 3px solid var(--primary-mid); padding-left: 12px;">
+              <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">June 25, 2026</span>
+              <h4 style="font-size: 0.95rem; color: var(--primary-dark); margin: 2px 0;">New Science Interactive modules configured</h4>
+              <p style="font-size: 0.85rem; color: #475569;">Our smart-classroom boards are loaded with animated diagrams for Biology and Chemistry models. Interactive revision classes are available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: Download revision notes -->
+      <div class="db-card" style="grid-column: span 2;">
+        <div class="db-card-header">
+          <h3><i class="fa-solid fa-cloud-arrow-down"></i> Download Notes</h3>
+          <span class="db-card-badge">E-Resources</span>
+        </div>
+        <div class="db-card-body">
+          <div class="download-list">
+            <div class="download-item">
+              <span><i class="fa-solid fa-file-pdf" style="color: #FF4D4D; margin-right: 8px;"></i> 10th Standard Algebra Mock Answer Key.pdf</span>
+              <a href="#" class="download-trigger" data-file="10th_Algebra_Mock_Key.pdf"><i class="fa-solid fa-arrow-down-to-bracket"></i> Download</a>
+            </div>
+            <div class="download-item">
+              <span><i class="fa-solid fa-file-pdf" style="color: #FF4D4D; margin-right: 8px;"></i> Physics Optics Numerical formulas summary sheet.pdf</span>
+              <a href="#" class="download-trigger" data-file="Optics_formulas_summary.pdf"><i class="fa-solid fa-arrow-down-to-bracket"></i> Download</a>
+            </div>
+            <div class="download-item">
+              <span><i class="fa-solid fa-file-pdf" style="color: #FF4D4D; margin-right: 8px;"></i> Chemistry Periodic Table patterns study material.pdf</span>
+              <a href="#" class="download-trigger" data-file="Periodic_Table_Guide.pdf"><i class="fa-solid fa-arrow-down-to-bracket"></i> Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- RIGHT PANEL: SIDEBAR NOTICE BOARD -->
+    <aside class="notice-board">
+      <h3><i class="fa-solid fa-circle-exclamation"></i> Notice Board</h3>
+      <div class="notice-list">
+        <!-- Notice 1 -->
+        <div class="notice-item" data-details="Compulsory Monthly assessment matches the real paper board style, starts 05:30 PM this Friday.">
+          <div class="notice-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="notice-content">
+            <h4>Monthly Test Every Friday</h4>
+            <p>Every Friday 05:30 PM - 08:00 PM. Performance maps shared next Monday.</p>
+          </div>
+        </div>
+        <!-- Notice 2 -->
+        <div class="notice-item" data-details="Tuition remains closed on all Sundays. Regular week classes resume from Monday afternoon.">
+          <div class="notice-icon"><i class="fa-solid fa-calendar-xmark"></i></div>
+          <div class="notice-content">
+            <h4>Holiday on Sunday</h4>
+            <p>Weekly holiday. Re-energize and clear your custom backlog notes.</p>
+          </div>
+        </div>
+        <!-- Notice 3 -->
+        <div class="notice-item" data-details="One-on-one progress review session with student parents. Check slots at reception desk.">
+          <div class="notice-icon"><i class="fa-solid fa-people-roof"></i></div>
+          <div class="notice-content">
+            <h4>Parent Meeting Every Month</h4>
+            <p>Monthly performance evaluation meetups. Focus on weak sectors.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ACTIONS PANEL: FOOTER BUTTONS -->
+    <div class="db-actions-panel">
+      <h3>Need guidance or looking for class hours?</h3>
+      <div class="db-buttons">
+        <a href="standards.html" class="btn btn-dark"><i class="fa-solid fa-list-check"></i> View Courses</a>
+        <a href="#" class="btn btn-primary download-trigger" data-file="All_Subjects_Combined_Guide.pdf"><i class="fa-solid fa-download"></i> Download Notes</a>
+        <button class="btn btn-secondary" id="contact-teacher-btn" style="color: var(--primary-mid); border-color: var(--primary-mid);"><i class="fa-solid fa-comments"></i> Contact Teacher</button>
+        <button class="btn btn-primary logout-trigger" style="background: linear-gradient(135deg, #FF4D4D, #CC0000); box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);"><i class="fa-solid fa-power-off"></i> Logout</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- DYNAMIC TOAST SUCCESS ALERT BANNER -->
+  <div class="toast-success" id="dashboard-toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-text">Success message details!</span>
+  </div>
+
+  <!-- CONTACT TEACHER MODAL -->
+  <div class="db-modal-overlay" id="contact-modal-overlay">
+    <div class="db-modal">
+      <div class="close-modal-btn" id="close-contact-modal">&times;</div>
+      <h3 style="display: flex; align-items: center; justify-content: center; gap: 8px;"><i class="fa-solid fa-phone-volume" style="color: var(--accent-orange);"></i> Teacher Directory</h3>
+      <p>Reach out to our subject mentors for instant doubt solving and review meetings.</p>
+      
+      <div class="teacher-contact-card">
+        <h4>S S Tuition Center Helpline</h4>
+        <p><i class="fa-solid fa-user-tie"></i> <strong>Head Director:</strong> S. Subramanian</p>
+        <p><i class="fa-solid fa-phone"></i> <strong>Call Support:</strong> +91 98765 43210</p>
+        <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> sstuitioncenter@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong> Tholasampatti, Salem, Tamil Nadu</p>
+      </div>
+      
+      <button class="btn btn-primary" id="contact-modal-dismiss" style="width: 100%;">Done, Understood</button>
+    </div>
+  </div>
+
+  <!-- Dashboard JavaScript Logic -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

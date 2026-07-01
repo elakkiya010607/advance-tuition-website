@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access the student dashboard. Login to view study materials, marks, announcements, and track your attendance at S S Tuition Center.">
+  <title>Student Portal Login | S S Tuition Center</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Styling sheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-body">
+
+  <!-- Background decorative blur elements -->
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+
+  <!-- GLASSMORPHISM LOGIN CONTAINER -->
+  <main class="login-container">
+    <div class="login-header">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="S S Tuition Center Logo" class="logo-img">
+      </div>
+      <h2>Student Login</h2>
+      <p>S S Tuition Center Student Portal</p>
+    </div>
+
+    <!-- FORM SUBMISSION -->
+    <form id="login-form" class="login-form" novalidate>
+      <!-- Student Name field -->
+      <div class="form-group">
+        <input type="text" id="student-name" class="form-input" placeholder=" " required autocomplete="off">
+        <i class="fa-solid fa-user"></i>
+        <label for="student-name" class="form-label">Student Name</label>
+        <div class="error-message" id="name-error"></div>
+      </div>
+
+      <!-- Email Address field -->
+      <div class="form-group">
+        <input type="email" id="student-email" class="form-input" placeholder=" " required autocomplete="email">
+        <i class="fa-solid fa-envelope"></i>
+        <label for="student-email" class="form-label">Email Address</label>
+        <div class="error-message" id="email-error"></div>
+      </div>
+
+      <!-- Password field -->
+      <div class="form-group">
+        <input type="password" id="student-password" class="form-input" placeholder=" " required autocomplete="current-password">
+        <i class="fa-solid fa-lock"></i>
+        <label for="student-password" class="form-label">Password</label>
+        <div class="error-message" id="password-error"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+        <button type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      </div>
+    </form>
+
+    <!-- Go Back Link -->
+    <p style="margin-top: 30px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.65);">
+      <a href="index.html" style="color: var(--accent-orange); font-weight: 600;"><i class="fa-solid fa-arrow-left"></i> Back to Homepage</a>
+    </p>
+
+    <!-- SUCCESS ANIMATION SCREEN OVERLAY -->
+    <div class="success-overlay" id="success-overlay">
+      <div class="checkmark-circle">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3>Login Successful</h3>
+      <p>Welcome back, <strong id="success-student-name" style="color: var(--accent-orange);">Student</strong>!</p>
+      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 10px;">Redirecting to Dashboard...</p>
+    </div>
+  </main>
+
+  <!-- Login JavaScript Logic -->
+  <script src="js/login.js"></script>
+</body>
+</html>
